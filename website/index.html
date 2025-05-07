@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DikiSwap - Swap anytime, anywhere</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Floating token icons background -->
+      <div class="token-background">
+        <div class="token-icon" style="top: 15%; left: 10%">
+          <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="ETH" />
+        </div>
+        <div class="token-icon" style="top: 25%; left: 80%">
+          <img src="https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png" alt="USDC" />
+        </div>
+        <div class="token-icon" style="top: 70%; left: 15%">
+          <img src="https://assets.coingecko.com/coins/images/877/small/chainlink-new-logo.png" alt="LINK" />
+        </div>
+        <div class="token-icon" style="top: 40%; left: 90%">
+          <img src="https://assets.coingecko.com/coins/images/12504/small/uni.jpg" alt="UNI" />
+        </div>
+        <div class="token-icon" style="top: 80%; left: 75%">
+          <img src="https://assets.coingecko.com/coins/images/9956/small/4943.png" alt="DAI" />
+        </div>
+        <div class="token-icon" style="top: 30%; left: 30%">
+          <img src="https://assets.coingecko.com/coins/images/12645/small/AAVE.png" alt="AAVE" />
+        </div>
+        <div class="token-icon" style="top: 60%; left: 40%">
+          <img src="https://assets.coingecko.com/coins/images/10775/small/COMP.png" alt="COMP" />
+        </div>
+      </div>
+
+      <!-- Header/Navigation -->
+      <header>
+        <div class="logo">
+          <img src="assets/logo.svg" alt="DikiSwap Logo" class="logo-img" />
+          <span class="logo-text">DikiSwap</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#" class="active">Trade</a></li>
+            <li><a href="#pools">Pool</a></li>
+            <li><a href="#charts">Charts</a></li>
+            <li><a href="#history">History</a></li>
+            <li>
+              <a href="presale.html" class="presale-link">Presale <span class="new-badge">New</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="right-nav">
+          <div class="search-bar">
+            <input type="text" placeholder="Search tokens" />
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="network-selector" id="network-selector">
+            <span class="network-name">Ethereum</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <button id="connect-wallet" class="connect-button">Connect</button>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <div class="hero-section">
+          <h1>Swap anytime, <br />anywhere.</h1>
+        </div>
+
+        <!-- Presale Banner -->
+        <div class="presale-banner">
+          <div class="presale-banner-content">
+            <div class="presale-banner-icon">
+              <img src="assets/diki-token.svg" alt="DikiToken" />
+            </div>
+            <div class="presale-banner-text">
+              <h3>DikiToken ICO Presale is Live!</h3>
+              <p>Get 30% bonus in the first phase. Limited time offer.</p>
+            </div>
+            <a href="presale.html" class="presale-banner-button">Join Presale</a>
+          </div>
+          <button class="close-banner">&times;</button>
+        </div>
+
+        <!-- Swap Container -->
+        <div class="swap-container">
+          <div class="swap-header">
+            <span class="active">Sell</span>
+          </div>
+          <div class="swap-input-container">
+            <div class="input-with-max">
+              <input type="number" placeholder="0" id="sell-amount" />
+            </div>
+            <div class="token-selector" id="sell-token">
+              <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="ETH" />
+              <span data-symbol="ETH">ETH</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+
+          <!-- Percentage Buttons -->
+          <div class="percentage-buttons">
+            <button class="percentage-button" data-percentage="25">25%</button>
+            <button class="percentage-button" data-percentage="50">50%</button>
+            <button class="percentage-button" data-percentage="75">75%</button>
+            <button class="percentage-button" data-percentage="100">Max</button>
+          </div>
+
+          <!-- Swap Direction Arrow -->
+          <div class="swap-direction">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+
+          <div class="swap-header">
+            <span class="active">Buy</span>
+          </div>
+          <div class="swap-input-container">
+            <div class="input-with-max">
+              <input type="number" placeholder="0" id="buy-amount" readonly />
+            </div>
+            <div class="token-selector" id="buy-token">
+              <span>Select token</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+
+          <!-- Connect/Swap Button -->
+          <button id="swap-button" class="swap-button">Get started</button>
+
+          <div class="swap-info">
+            <p>The largest on-chain marketplace. Buy and sell crypto on Ethereum and 12+ other chains.</p>
+          </div>
+        </div>
+
+        <div class="scroll-indicator">
+          <p>Scroll to learn more</p>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <!-- Chart Section -->
+        <section id="charts" class="chart-section">
+          <h2>Price Chart</h2>
+          <div class="chart-container">
+            <div class="chart-header">
+              <div class="token-pair">
+                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="ETH" />
+                <img src="https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png" alt="USDC" />
+                <span>ETH/USDC</span>
+              </div>
+              <div class="chart-timeframes">
+                <button class="timeframe-btn active">1D</button>
+                <button class="timeframe-btn">1W</button>
+                <button class="timeframe-btn">1M</button>
+                <button class="timeframe-btn">1Y</button>
+              </div>
+            </div>
+            <div class="chart-body">
+              <canvas id="price-chart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pools Section -->
+        <section id="pools" class="pools-section">
+          <h2>Liquidity Pools</h2>
+          <div class="pools-container">
+            <div class="pool-card">
+              <div class="pool-header">
+                <div class="pool-icons">
+                  <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="ETH" />
+                  <img src="https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png" alt="USDC" />
+                </div>
+                <div class="pool-name">ETH/USDC</div>
+              </div>
+              <div class="pool-stats">
+                <div class="stat">
+                  <span class="stat-label">TVL</span>
+                  <span class="stat-value">$24.5M</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">APR</span>
+                  <span class="stat-value">12.4%</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">Volume 24h</span>
+                  <span class="stat-value">$3.2M</span>
+                </div>
+              </div>
+              <button class="pool-button">Add Liquidity</button>
+            </div>
+            <div class="pool-card">
+              <div class="pool-header">
+                <div class="pool-icons">
+                  <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="ETH" />
+                  <img src="https://assets.coingecko.com/coins/images/9956/small/4943.png" alt="DAI" />
+                </div>
+                <div class="pool-name">ETH/DAI</div>
+              </div>
+              <div class="pool-stats">
+                <div class="stat">
+                  <span class="stat-label">TVL</span>
+                  <span class="stat-value">$18.7M</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">APR</span>
+                  <span class="stat-value">10.8%</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">Volume 24h</span>
+                  <span class="stat-value">$2.5M</span>
+                </div>
+              </div>
+              <button class="pool-button">Add Liquidity</button>
+            </div>
+            <div class="pool-card">
+              <div class="pool-header">
+                <div class="pool-icons">
+                  <img src="https://assets.coingecko.com/coins/images/7598/small/wrapped_bitcoin_wbtc.png" alt="WBTC" />
+                  <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="ETH" />
+                </div>
+                <div class="pool-name">WBTC/ETH</div>
+              </div>
+              <div class="pool-stats">
+                <div class="stat">
+                  <span class="stat-label">TVL</span>
+                  <span class="stat-value">$32.1M</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">APR</span>
+                  <span class="stat-value">8.6%</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">Volume 24h</span>
+                  <span class="stat-value">$5.7M</span>
+                </div>
+              </div>
+              <button class="pool-button">Add Liquidity</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Transaction History Section -->
+        <section id="history" class="history-section">
+          <h2>Transaction History</h2>
+          <div class="history-container">
+            <div class="history-header">
+              <div class="history-filter">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Swaps</button>
+                <button class="filter-btn">Liquidity</button>
+              </div>
+            </div>
+            <div class="history-table">
+              <div class="history-table-header">
+                <div class="history-col">Type</div>
+                <div class="history-col">Amount</div>
+                <div class="history-col">Token Pair</div>
+                <div class="history-col">Time</div>
+                <div class="history-col">Status</div>
+              </div>
+              <div class="history-table-body" id="history-table-body">
+                <!-- Transaction rows will be added dynamically -->
+                <div class="history-row">
+                  <div class="history-col">
+                    <span class="transaction-type swap">Swap</span>
+                  </div>
+                  <div class="history-col">0.5 ETH</div>
+                  <div class="history-col">ETH → USDC</div>
+                  <div class="history-col">2 mins ago</div>
+                  <div class="history-col">
+                    <span class="transaction-status completed">Completed</span>
+                  </div>
+                </div>
+                <div class="history-row">
+                  <div class="history-col">
+                    <span class="transaction-type liquidity">Add Liquidity</span>
+                  </div>
+                  <div class="history-col">1.2 ETH</div>
+                  <div class="history-col">ETH/USDC</div>
+                  <div class="history-col">1 hour ago</div>
+                  <div class="history-col">
+                    <span class="transaction-status completed">Completed</span>
+                  </div>
+                </div>
+                <div class="history-row">
+                  <div class="history-col">
+                    <span class="transaction-type swap">Swap</span>
+                  </div>
+                  <div class="history-col">500 USDC</div>
+                  <div class="history-col">USDC → DAI</div>
+                  <div class="history-col">3 hours ago</div>
+                  <div class="history-col">
+                    <span class="transaction-status completed">Completed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Token Selection Modal -->
+      <div class="token-modal" id="token-modal">
+        <div class="token-modal-content">
+          <div class="token-modal-header">
+            <h3>Select a token</h3>
+            <button class="close-modal">&times;</button>
+          </div>
+          <div class="token-search">
+            <div class="search-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <input type="text" placeholder="Search name or paste address" />
+            <div class="token-search-info">
+              <span>Tokens from your wallet will appear here</span>
+            </div>
+          </div>
+          <div class="common-bases">
+            <div class="common-bases-title">Common bases</div>
+            <div class="common-bases-tokens">
+              <div class="common-base-token" data-symbol="ETH">
+                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="ETH" />
+                <span>ETH</span>
+              </div>
+              <div class="common-base-token" data-symbol="USDC">
+                <img src="https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png" alt="USDC" />
+                <span>USDC</span>
+              </div>
+              <div class="common-base-token" data-symbol="USDT">
+                <img src="https://assets.coingecko.com/coins/images/325/small/Tether.png" alt="USDT" />
+                <span>USDT</span>
+              </div>
+              <div class="common-base-token" data-symbol="DAI">
+                <img src="https://assets.coingecko.com/coins/images/9956/small/4943.png" alt="DAI" />
+                <span>DAI</span>
+              </div>
+            </div>
+          </div>
+          <div class="token-list-header">
+            <div class="token-list-title">Token name</div>
+            <div class="token-list-balance">Balance</div>
+          </div>
+          <div class="token-list">
+            <!-- Token items will be populated dynamically -->
+            <div class="token-list-loading" id="token-list-loading">
+              <div class="loading-spinner"></div>
+              <span>Loading tokens...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Network Selection Modal -->
+    <div class="network-modal" id="network-modal">
+      <div class="network-modal-content">
+        <div class="network-modal-header">
+          <h3>Select a Network</h3>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="network-list">
+          <div class="network-item" data-chain-id="0x1">
+            <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="Ethereum" />
+            <div class="network-info">
+              <span class="network-name">Ethereum</span>
+              <span class="network-status">Connected</span>
+            </div>
+          </div>
+          <div class="network-item" data-chain-id="0x89">
+            <img src="https://assets.coingecko.com/coins/images/4713/small/matic-token-icon.png" alt="Polygon" />
+            <div class="network-info">
+              <span class="network-name">Polygon</span>
+            </div>
+          </div>
+          <div class="network-item" data-chain-id="0xa">
+            <img src="https://assets.coingecko.com/coins/images/25244/small/Optimism.png" alt="Optimism" />
+            <div class="network-info">
+              <span class="network-name">Optimism</span>
+            </div>
+          </div>
+          <div class="network-item" data-chain-id="0xa4b1">
+            <img src="https://assets.coingecko.com/coins/images/16547/small/photo_2023-03-29_21.47.00.jpeg" alt="Arbitrum" />
+            <div class="network-info">
+              <span class="network-name">Arbitrum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/tokens.js"></script>
+    <script src="assets/chart.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

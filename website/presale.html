@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DikiToken ICO Presale - DikiSwap</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="presale.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Floating token icons background -->
+      <div class="token-background">
+        <div class="token-icon" style="top: 15%; left: 10%">
+          <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="ETH" />
+        </div>
+        <div class="token-icon" style="top: 25%; left: 80%">
+          <img src="https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png" alt="USDC" />
+        </div>
+        <div class="token-icon" style="top: 70%; left: 15%">
+          <img src="https://assets.coingecko.com/coins/images/877/small/chainlink-new-logo.png" alt="LINK" />
+        </div>
+        <div class="token-icon" style="top: 40%; left: 90%">
+          <img src="https://assets.coingecko.com/coins/images/12504/small/uni.jpg" alt="UNI" />
+        </div>
+        <div class="token-icon" style="top: 80%; left: 75%">
+          <img src="https://assets.coingecko.com/coins/images/9956/small/4943.png" alt="DAI" />
+        </div>
+        <div class="token-icon" style="top: 30%; left: 30%">
+          <img src="https://assets.coingecko.com/coins/images/12645/small/AAVE.png" alt="AAVE" />
+        </div>
+        <div class="token-icon" style="top: 60%; left: 40%">
+          <img src="https://assets.coingecko.com/coins/images/10775/small/COMP.png" alt="COMP" />
+        </div>
+      </div>
+
+      <!-- Header/Navigation -->
+      <header>
+        <div class="logo">
+          <img src="assets/logo.svg" alt="DikiSwap Logo" class="logo-img" />
+          <span class="logo-text">DikiSwap</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Trade</a></li>
+            <li><a href="index.html#pools">Pool</a></li>
+            <li><a href="index.html#charts">Charts</a></li>
+            <li><a href="presale.html" class="active">Presale</a></li>
+          </ul>
+        </nav>
+        <div class="right-nav">
+          <div class="network-selector" id="network-selector">
+            <span class="network-name">Ethereum</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <button id="connect-wallet" class="connect-button">Connect</button>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <div class="hero-section presale-hero">
+          <h1>DikiToken ICO Presale</h1>
+          <p class="hero-subtitle">Be the first to own the native token of the DikiSwap ecosystem</p>
+        </div>
+
+        <!-- Presale Container -->
+        <div class="presale-container">
+          <!-- Token Info Section -->
+          <div class="presale-section token-info-section">
+            <div class="token-info-header">
+              <div class="token-logo">
+                <img src="assets/diki-token.svg" alt="DikiToken" id="diki-token-logo" />
+              </div>
+              <div class="token-details">
+                <h2>DikiToken (DIKI)</h2>
+                <p>The governance and utility token of the DikiSwap ecosystem</p>
+              </div>
+            </div>
+            <div class="token-stats">
+              <div class="token-stat">
+                <span class="stat-label">Token Price</span>
+                <span class="stat-value">0.0001 ETH</span>
+              </div>
+              <div class="token-stat">
+                <span class="stat-label">Total Supply</span>
+                <span class="stat-value">100,000,000 DIKI</span>
+              </div>
+              <div class="token-stat">
+                <span class="stat-label">For Presale</span>
+                <span class="stat-value">20,000,000 DIKI</span>
+              </div>
+              <div class="token-stat">
+                <span class="stat-label">Min Purchase</span>
+                <span class="stat-value">0.1 ETH</span>
+              </div>
+              <div class="token-stat">
+                <span class="stat-label">Max Purchase</span>
+                <span class="stat-value">10 ETH</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Presale Progress Section -->
+          <div class="presale-section progress-section">
+            <h3>Presale Progress</h3>
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 35%"></div>
+              </div>
+              <div class="progress-stats">
+                <span>7,000,000 / 20,000,000 DIKI</span>
+                <span>35% Sold</span>
+              </div>
+            </div>
+            <div class="presale-phases">
+              <div class="phase active">
+                <span class="phase-name">Phase 1</span>
+                <span class="phase-bonus">+30% Bonus</span>
+              </div>
+              <div class="phase">
+                <span class="phase-name">Phase 2</span>
+                <span class="phase-bonus">+20% Bonus</span>
+              </div>
+              <div class="phase">
+                <span class="phase-name">Phase 3</span>
+                <span class="phase-bonus">+10% Bonus</span>
+              </div>
+              <div class="phase">
+                <span class="phase-name">Phase 4</span>
+                <span class="phase-bonus">No Bonus</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Countdown Section -->
+          <div class="presale-section countdown-section">
+            <h3>Presale Ends In</h3>
+            <div class="countdown-timer">
+              <div class="countdown-item">
+                <span class="countdown-value" id="days">14</span>
+                <span class="countdown-label">Days</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="hours">22</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="minutes">45</span>
+                <span class="countdown-label">Minutes</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="seconds">18</span>
+                <span class="countdown-label">Seconds</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Buy Token Section -->
+          <div class="presale-section buy-section">
+            <h3>Buy DikiToken</h3>
+            <div class="buy-form">
+              <div class="input-group">
+                <label for="eth-amount">Amount in ETH</label>
+                <div class="input-with-max">
+                  <input type="number" id="eth-amount" placeholder="0.0" min="0.1" max="10" step="0.1" />
+                  <button class="max-button">MAX</button>
+                </div>
+              </div>
+              <div class="token-receive">
+                <span>You will receive:</span>
+                <div class="token-amount">
+                  <span id="diki-amount">0</span>
+                  <span>DIKI</span>
+                </div>
+                <div class="bonus-amount">
+                  <span>+</span>
+                  <span id="bonus-amount">0</span>
+                  <span>DIKI (30% Bonus)</span>
+                </div>
+              </div>
+              <button id="buy-token-btn" class="buy-button">Buy DikiToken</button>
+            </div>
+          </div>
+
+          <!-- Token Allocation Section -->
+          <div class="presale-section allocation-section">
+            <h3>Token Allocation</h3>
+            <div class="allocation-chart">
+              <canvas id="allocation-chart"></canvas>
+            </div>
+            <div class="allocation-legend">
+              <div class="legend-item">
+                <span class="legend-color" style="background-color: rgba(0, 200, 83, 0.8)"></span>
+                <span class="legend-text">Presale (20%)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color" style="background-color: rgba(105, 240, 174, 0.8)"></span>
+                <span class="legend-text">Liquidity (30%)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color" style="background-color: rgba(0, 178, 72, 0.8)"></span>
+                <span class="legend-text">Team (15%)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color" style="background-color: rgba(185, 246, 202, 0.8)"></span>
+                <span class="legend-text">Marketing (10%)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color" style="background-color: rgba(27, 94, 32, 0.8)"></span>
+                <span class="legend-text">Development (15%)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color" style="background-color: rgba(46, 125, 50, 0.8)"></span>
+                <span class="legend-text">Reserve (10%)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Roadmap Section -->
+          <div class="presale-section roadmap-section">
+            <h3>Roadmap</h3>
+            <div class="roadmap">
+              <div class="roadmap-item completed">
+                <div class="roadmap-point"></div>
+                <div class="roadmap-content">
+                  <h4>Q2 2023</h4>
+                  <ul>
+                    <li>Project Concept</li>
+                    <li>Team Formation</li>
+                    <li>Initial Development</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="roadmap-item completed">
+                <div class="roadmap-point"></div>
+                <div class="roadmap-content">
+                  <h4>Q3 2023</h4>
+                  <ul>
+                    <li>DikiSwap DEX Alpha</li>
+                    <li>Smart Contract Audit</li>
+                    <li>Community Building</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="roadmap-item active">
+                <div class="roadmap-point"></div>
+                <div class="roadmap-content">
+                  <h4>Q4 2023</h4>
+                  <ul>
+                    <li>DikiToken Presale</li>
+                    <li>DEX Beta Launch</li>
+                    <li>Liquidity Mining Program</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="roadmap-item">
+                <div class="roadmap-point"></div>
+                <div class="roadmap-content">
+                  <h4>Q1 2024</h4>
+                  <ul>
+                    <li>DEX Full Launch</li>
+                    <li>Governance Implementation</li>
+                    <li>Cross-chain Integration</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="roadmap-item">
+                <div class="roadmap-point"></div>
+                <div class="roadmap-content">
+                  <h4>Q2 2024</h4>
+                  <ul>
+                    <li>Mobile App Launch</li>
+                    <li>Advanced Trading Features</li>
+                    <li>Strategic Partnerships</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="presale-footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="assets/logo.svg" alt="DikiSwap Logo" />
+            <span>DikiSwap</span>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Products</h4>
+              <ul>
+                <li><a href="index.html">Exchange</a></li>
+                <li><a href="index.html#pools">Liquidity</a></li>
+                <li><a href="presale.html">DikiToken</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Resources</h4>
+              <ul>
+                <li><a href="#">Whitepaper</a></li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">GitHub</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Community</h4>
+              <ul>
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Telegram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 DikiSwap. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Network Selection Modal -->
+    <div class="network-modal" id="network-modal">
+      <div class="network-modal-content">
+        <div class="network-modal-header">
+          <h3>Select a Network</h3>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="network-list">
+          <div class="network-item" data-chain-id="0x1">
+            <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="Ethereum" />
+            <div class="network-info">
+              <span class="network-name">Ethereum</span>
+              <span class="network-status">Connected</span>
+            </div>
+          </div>
+          <div class="network-item" data-chain-id="0x89">
+            <img src="https://assets.coingecko.com/coins/images/4713/small/matic-token-icon.png" alt="Polygon" />
+            <div class="network-info">
+              <span class="network-name">Polygon</span>
+            </div>
+          </div>
+          <div class="network-item" data-chain-id="0xa">
+            <img src="https://assets.coingecko.com/coins/images/25244/small/Optimism.png" alt="Optimism" />
+            <div class="network-info">
+              <span class="network-name">Optimism</span>
+            </div>
+          </div>
+          <div class="network-item" data-chain-id="0xa4b1">
+            <img src="https://assets.coingecko.com/coins/images/16547/small/photo_2023-03-29_21.47.00.jpeg" alt="Arbitrum" />
+            <div class="network-info">
+              <span class="network-name">Arbitrum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/tokens.js"></script>
+    <script src="assets/chart.js"></script>
+    <script src="presale.js"></script>
+  </body>
+</html>

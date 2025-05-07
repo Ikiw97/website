@@ -1,0 +1,624 @@
+/* Presale Page Styles */
+
+/* Hero Section */
+.presale-hero {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.presale-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, var(--primary-color), var(--tertiary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--secondary-text);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Presale Container */
+.presale-container {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Presale Sections */
+.presale-section {
+  background-color: var(--card-color);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(105, 240, 174, 0.1);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.presale-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.presale-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--tertiary-color);
+  border-bottom: 1px solid rgba(105, 240, 174, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+/* Token Info Section */
+.token-info-section {
+  grid-column: span 2;
+}
+
+.token-info-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.token-logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 1.5rem;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 200, 83, 0.3);
+}
+
+.token-logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.token-details h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.token-details p {
+  color: var(--secondary-text);
+  font-size: 1.1rem;
+}
+
+.token-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.token-stat {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid rgba(105, 240, 174, 0.1);
+}
+
+.stat-label {
+  display: block;
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Progress Section */
+.progress-section {
+  grid-column: span 2;
+}
+
+.progress-container {
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(105, 240, 174, 0.1);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.progress-stats {
+  display: flex;
+  justify-content: space-between;
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+}
+
+.presale-phases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.phase {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid rgba(105, 240, 174, 0.1);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.phase.active {
+  background: rgba(0, 200, 83, 0.1);
+  border-color: rgba(105, 240, 174, 0.3);
+  opacity: 1;
+  box-shadow: 0 4px 15px rgba(0, 200, 83, 0.2);
+}
+
+.phase-name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.phase-bonus {
+  color: var(--tertiary-color);
+  font-size: 0.9rem;
+}
+
+/* Countdown Section */
+.countdown-section {
+  text-align: center;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.countdown-item {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  min-width: 80px;
+  border: 1px solid rgba(105, 240, 174, 0.1);
+}
+
+.countdown-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--tertiary-color);
+}
+
+.countdown-label {
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+}
+
+/* Buy Section */
+.buy-section {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.buy-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+}
+
+.input-with-max {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(105, 240, 174, 0.1);
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.input-with-max:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 200, 83, 0.2);
+}
+
+.input-with-max input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.max-button {
+  background: rgba(105, 240, 174, 0.1);
+  border: 1px solid rgba(105, 240, 174, 0.2);
+  color: var(--tertiary-color);
+  border-radius: 8px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.max-button:hover {
+  background: rgba(105, 240, 174, 0.2);
+  border-color: rgba(105, 240, 174, 0.4);
+}
+
+.token-receive {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(105, 240, 174, 0.1);
+}
+
+.token-receive > span {
+  display: block;
+  color: var(--secondary-text);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.token-amount {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.bonus-amount {
+  color: var(--tertiary-color);
+  font-size: 1rem;
+}
+
+.buy-button {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  color: #0a1f0a;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 200, 83, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.buy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 200, 83, 0.4);
+}
+
+.buy-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.buy-button:hover:before {
+  left: 100%;
+}
+
+/* Allocation Section */
+.allocation-section {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.allocation-chart {
+  height: 200px;
+  margin-bottom: 1.5rem;
+}
+
+.allocation-legend {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.legend-text {
+  font-size: 0.9rem;
+}
+
+/* Roadmap Section */
+.roadmap-section {
+  grid-column: span 2;
+}
+
+.roadmap {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.roadmap:before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(105, 240, 174, 0.2);
+  z-index: 1;
+}
+
+.roadmap-item {
+  position: relative;
+  z-index: 2;
+  width: 18%;
+  text-align: center;
+}
+
+.roadmap-point {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--card-color);
+  border: 2px solid rgba(105, 240, 174, 0.3);
+  margin: 0 auto 1rem;
+  position: relative;
+  z-index: 3;
+}
+
+.roadmap-item.completed .roadmap-point {
+  background-color: var(--primary-color);
+}
+
+.roadmap-item.active .roadmap-point {
+  background-color: var(--tertiary-color);
+  box-shadow: 0 0 0 4px rgba(105, 240, 174, 0.2);
+}
+
+.roadmap-content {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(105, 240, 174, 0.1);
+}
+
+.roadmap-content h4 {
+  margin-bottom: 0.5rem;
+  color: var(--tertiary-color);
+}
+
+.roadmap-content ul {
+  text-align: left;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+}
+
+.roadmap-content li {
+  margin-bottom: 0.25rem;
+}
+
+/* Footer */
+.presale-footer {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(105, 240, 174, 0.1);
+  padding: 3rem 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer-logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.75rem;
+}
+
+.footer-logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.footer-links {
+  display: flex;
+  gap: 3rem;
+}
+
+.footer-column h4 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  color: var(--secondary-text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: var(--tertiary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(105, 240, 174, 0.1);
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .presale-container {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .presale-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .token-info-section,
+  .progress-section,
+  .allocation-section,
+  .buy-section,
+  .roadmap-section {
+    grid-column: span 1;
+  }
+  
+  .token-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .roadmap {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .roadmap:before {
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 24px;
+  }
+  
+  .roadmap-item {
+    width: 100%;
+    text-align: left;
+    padding-left: 50px;
+  }
+  
+  .roadmap-point {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    margin: 0;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-links {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .presale-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .token-info-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .token-logo {
+    margin: 0 auto 1rem;
+  }
+  
+  .token-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .presale-phases {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .countdown-timer {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .countdown-item {
+    width: calc(50% - 0.5rem);
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .token-stats {
+    grid-template-columns: 1fr;
+  }
+}
